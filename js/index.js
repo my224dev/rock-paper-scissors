@@ -67,11 +67,10 @@ function game()
         let playerSelection = capitalize(prompt('Choose between Rock, Paper and Scissors to play'));
         if(options.indexOf(playerSelection) < 0) {
             console.log('Invalide value, try egain !');
-            game();
+            return game();
         }
-        else resultRound(playerSelection,computerPlay());
+        else return resultRound(playerSelection,computerPlay());
     }
-
     return (playerScore > computerScore) ? 
         'Congratulations you won ' + playerScore + ' : '+ computerScore :
         'Sorry you lost '+ playerScore + ' : '+ computerScore;
