@@ -7,6 +7,9 @@ const optionsMappingWiner = {
     Scissors : {winer: "Paper"}
 };
 
+let playerScore = 0;
+let computerScore = 0;
+
 console.log(game());
 
 // this function retrun randomly either Rock, Paper or Scissors
@@ -60,9 +63,8 @@ function resultRound(playerSelection, computerSelection)
 
 function game()
 {
-    let playerScore = 0;
-    let computerScore = 0;
-
+    playerScore = 0;
+    computerScore = 0;
     for(let cpt = 0; cpt < 5; cpt++) {
         let playerSelection = capitalize(prompt('Choose between Rock, Paper and Scissors to play'));
         if(options.indexOf(playerSelection) < 0) {
