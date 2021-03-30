@@ -69,7 +69,7 @@ function game()
             console.log('Invalide value, try egain !');
             return game();
         }
-        else return resultRound(playerSelection,computerPlay());
+        else resultRound(playerSelection,computerPlay());
     }
     playerScore = 0;
     computerScore = 0;
