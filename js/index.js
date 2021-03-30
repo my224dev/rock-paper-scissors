@@ -7,8 +7,8 @@ const optionsMappingWiner = {
     Scissors : {winer: "Paper"}
 };
 
-var playerScore = 0;
-var computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 console.log(game());
 
@@ -63,6 +63,8 @@ function resultRound(playerSelection, computerSelection)
 
 function game()
 {
+    playerScore = 0;
+    computerScore = 0;
     for(let cpt = 0; cpt < 5; cpt++) {
         let playerSelection = capitalize(prompt('Choose between Rock, Paper and Scissors to play'));
         if(options.indexOf(playerSelection) < 0) {
@@ -71,8 +73,6 @@ function game()
         }
         else resultRound(playerSelection,computerPlay());
     }
-    playerScore = 0;
-    computerScore = 0;
     return (playerScore > computerScore) ? 
         'Congratulations you won ' + playerScore + ' : '+ computerScore :
         'Sorry you lost '+ playerScore + ' : '+ computerScore;
