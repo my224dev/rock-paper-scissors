@@ -1,0 +1,88 @@
+body {
+ margin: 0;
+ padding: 0;
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ background-color: gray;
+ font-weight: bolder;
+}
+.container {
+    text-align: center;
+    width: 100%;
+}
+.players {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    border: 3px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.game-board {   
+    margin: 15px;
+    padding: 5px;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw;
+    grid-template-rows: 80px 80px;
+    column-gap: 10px;
+}
+.game-board__user {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.game-board__user img {
+    width: 50px;
+    margin-top: 5px;  
+}
+.game-board__score
+{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    
+}
+.game-board__btns {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+.btn {
+    outline-style: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 7vw;
+    background-color: dimgray;
+    transition: transform 0.5s ease; 
+}
+.btn__img {
+    width: 5vw;
+}
+.game-board__score h3 {
+   margin-top:10px;
+   margin-bottom:2px;
+}
+.game-board__score span {
+    font-size: 30px;
+}
+.selected {
+    transform: scale(1.1);  
+    border-color: blue;
+    box-shadow: 2px 2px 2px blue;
+}
+
+.message {
+    font-size: 15px;
+}
+.resultat-final {
+    font-size: 30px;
+}

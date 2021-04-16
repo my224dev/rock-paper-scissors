@@ -4,10 +4,66 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title></title>
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="data:;base64,=">
     </head>
     <body>
-        
+        <div class="container">
+            <h1 class="title">WELCOME TO ROCK-PAPER-SCISSOR GAME</h1>
+            <h2 class="rules">The first to socores 5 points will win</h2>
+            <h3 class="start-game">Start playing by doing your choice</h3>
+            <div class="players">
+                <div class="human">
+                  <h2>Player</h2>
+                  <div class="game-board">
+                    <div class="game-board__user" >
+                        <img src="images/user-solid-grey.svg" alt="user-solid">
+                    </div>
+                    <div class="game-board__score">
+                        <h3>Score</h3>
+                        <span class="user-score">0</span>
+                    </div>
+                    <div class="game-board__btns">
+                        <button class="btn human__btn" data-id="Rock">
+                            <img src="images/rock.png" class="btn__img" alt="rock">
+                        </button>
+                        <button class="btn human__btn" data-id="Paper">
+                            <img src="images/paper.png" class="btn__img" alt="paper">
+                        </button>
+                        <button class="btn human__btn" data-id="Scissors" >
+                            <img src="images/scissors.png" class="btn__img" alt="scissors" >
+                        </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="computer">
+                    <h2>Computer</h2>
+                    <div class="game-board">
+                        <div class="game-board__user" >
+                            <img src="images/laptop-solid-grey.svg" alt="user-solid">
+                        </div>
+                        <div class="game-board__score">
+                            <h3>Score</h3>
+                            <span class="computer-score">0</span>
+                        </div>
+                        <div class="game-board__btns">
+                            <button class="btn" data-computer = "Rock">
+                                <img src="images/rock.png" class="btn__img" alt="rock">
+                            </button>
+                            <button class="btn" data-computer="Paper">
+                                <img src="images/paper.png" class="btn__img" alt="paper">
+                            </button>
+                            <button class="btn" data-computer="Scissors">
+                                <img src="images/scissors.png" class="btn__img" alt="scissors">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="message"></p>
+            <p class="resultat-final"></p>
+        </div>
         <script src="js/index.js"></script>        
     </body>
 </html>
