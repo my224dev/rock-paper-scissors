@@ -78,21 +78,7 @@ function addStyling(currentBtn) {
     btnComputer = document.querySelector(`button[data-computer="${computerSelection}"]`);
     btnComputer.classList.add('selected');
 }
-function announceWinner(playerScore, computerScore) {
-    if (playerScore > computerScore) {
-        resultatUi.textContent = 'Congratulations you won ' + playerScore + ' : '+ computerScore;
-        resultatUi.style.color = 'green';
-    }
-    else {
-        resultatUi.textContent = 'Sorry you lost '+ playerScore + ' : '+ computerScore;
-        resultatUi.style.color = 'red';
-    }
-    
-    playerScore = 0;
-    computerScore = 0;
-    playerScoreUi.textContent = 0;
-    computerScoreUi.textContent = 0;
-}
+
 function game()
 {
     resultatUi.textContent = '';
@@ -103,8 +89,20 @@ function game()
     addStyling(this);
 
     resultRound(playerSelection, computerSelection);
-    
+
     if(playerScore == 5 || computerScore == 5) {
-        announceWinner(playerScore, computerScore);
+        if (playerScore > computerScore) {
+            resultatUi.textContent = 'Congratulations you won ' + playerScore + ' : '+ computerScore;
+            resultatUi.style.color = 'green';
+        }
+        else {
+            resultatUi.textContent = 'Sorry you lost '+ playerScore + ' : '+ computerScore;
+            resultatUi.style.color = 'red';
+        }
+        
+        playerScore = 0;
+        computerScore = 0;
+        playerScoreUi.textContent = 0;
+        computerScoreUi.textContent = 0;
     }
 }
